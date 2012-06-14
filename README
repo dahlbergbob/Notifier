@@ -7,3 +7,5 @@ The Notifier works in the manner of an event dispatcher but handles uses strongl
 It is an merge between AS3-Signals and native ActionScript Events which combines the pro's with signals in a more ActionScript-native way.
 
 The Main class is just an example class using the Notifier.
+The three examples just shows the simplicity of use and three alternate ways of doing it.
+
