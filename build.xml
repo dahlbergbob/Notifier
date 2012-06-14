@@ -29,6 +29,8 @@ available targets:
 		<compile-swc debug="false" />
 		<compile-swc debug="true" extra="-debug" />
 		<echo message="All swc's compiled successfully" />
+		<package />
+		<echo message="Release build packaged and zipped" />
 	</target>
 
 	<macrodef name="compile-swc">
@@ -44,6 +46,29 @@ available targets:
 			<move file="${code.out}/${buildname}.swc" tofile="${code.out}/${name} ${version}_${build.number}@{extra}.swc" />
 		</sequential>
 	</macrodef>
+	
+	<macrodef name="package" description="Packages the swc's with the readme and the license in a zip">
+		<sequential>
+			<delete>
+				<fileset dir="${code.out}">
+					<include name="*.zip" />
+				</fileset>
+			</delete>
+			
+			<copy todir="${code.out}/${name} ${version}_${build.number}">
+				<fileset dir="${code.out}">
+					<include name="*.swc" />
+				</fileset>
+				<fileset dir="${basedir}">
+					<include name="license.txt" />
+					<include name="README" />
+				</fileset>
+			</copy>
+			<zip destfile="${code.out}/${name} ${version}_${build.number}.zip" basedir="${code.out}/${name} ${version}_${build.number}" />
+			<delete dir="${code.out}/${name} ${version}_${build.number}" />
+		</sequential>
+	</macrodef>
+		
 	
 	
 	
