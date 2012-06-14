@@ -115,32 +115,4 @@ available targets:
 		</sequential>
 	</macrodef>
 	
-	<!--
-	<target name="debug" description="Build keyboard mapper lib">
-		<compc output="bin/KeyboardMapper-debug.swc" include-classes="com.boblu.keyboard.KeyboardMapper" target-player="${flash.version}">
-			<source-path path-element="${basedir}/src" />
-			<compiler.external-library-path dir="${FLEX_HOME}/frameworks/libs/player/${flash.version}">
-				<include name="playerglobal.swc" />
-			</compiler.external-library-path>
-			<compiler.external-library-path dir="${FLEX_HOME}/frameworks/libs">
-				<include name="framework.swc" />
-			</compiler.external-library-path>
-		</compc>
-	</target>
-	-->
-	
-	<!--
-	<target name="release" description="Build keyboard mapper lib">
-		<input message="Set the current build version:" defaultvalue="debug" addproperty="version" />
-		<compc output="bin/KeyboardMapper-${version}.swc" include-classes="com.boblu.keyboard.KeyboardMapper" target-player="${flash.version}">
-			<source-path path-element="${basedir}/src" />
-			<compiler.external-library-path dir="${FLEX_HOME}/frameworks/libs/player/${flash.version}">
-				<include name="playerglobal.swc" />
-			</compiler.external-library-path>
-			<compiler.external-library-path dir="${FLEX_HOME}/frameworks/libs">
-				<include name="framework.swc" />
-			</compiler.external-library-path>
-		</compc>
-	</target>
-	-->
 </project>
