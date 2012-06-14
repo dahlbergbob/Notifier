@@ -1,0 +1,9 @@
+Notifier Copyright (C) 2012 Bob Dahlberg
+
+This program comes with ABSOLUTELY NO WARRANTY; for details see http://www.gnu.org/licenses (GNU GPLv3)
+This is free software, and you are welcome to redistribute it under certain conditions.
+
+The Notifier works in the manner of an event dispatcher but handles uses strongly typed notifications instead of string event-types.
+It is an merge between AS3-Signals and native ActionScript Events which combines the pro's with signals in a more ActionScript-native way.
+
+The Main class is just an example class using the Notifier.

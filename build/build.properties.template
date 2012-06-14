@@ -1,0 +1,23 @@
+#globals
+FLEX_HOME 		= c:/bin/flex/flex4_5
+flex.task 		= ${FLEX_HOME}/ant/lib/flexTasks.jar
+player.version 	= 10.2
+
+#project specific
+name			= Notes 
+buildname		= Building
+
+#out
+code.out 		= ${basedir}/out
+
+#resources
+main.src		= ${basedir}/src/main
+main.lib		= ${basedir}/lib/main
+test.src 		= ${basedir}/src/test
+test.lib		= ${basedir}/lib/test
+
+#unit test
+unittest.output = ${basedir}/out/test/unittest.swf
+ci.base 		= ${basedir}/out/test/ci
+ci.bin			= ${ci.base}/bin
+ci.report		= ${ci.base}/report
